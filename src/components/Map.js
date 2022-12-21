@@ -1,14 +1,14 @@
 import React, { useEffect } from "react";
 
-function Map({ setSearchParam, setAirState }) {
+function Map({ setSearchParam, setAirState, handleButtonClick }) {
   const api = {
     key: "3de4b704a089d3d18bb9e7d1d961fe15",
     base: "https://api.openweathermap.org/data/2.5/weather",
   };
 
-  useEffect(
-    () =>
-      function svgturkiyeharitasi() {
+  useEffect(() => {
+    function svgturkiyeharitasi() {
+      if (typeof window !== undefined) {
         const element = document.querySelector("#svg-turkiye-haritasi");
         const info = document.querySelector(".il-isimleri");
         const getCityName = document.querySelectorAll("svg g path");
@@ -50,14 +50,16 @@ function Map({ setSearchParam, setAirState }) {
             }
           }
         });
-      },
-    []
-  );
+      }
+    }
+    svgturkiyeharitasi();
+  }, []);
   const mapSearch = (cityName) => {
     fetch(`${api.base}?q=${cityName}&units=metric&lang=tr&appid=${api.key}`)
       .then((data) => data.json())
       .then((result) => {
         setAirState(result);
+        handleButtonClick();
       });
   };
 

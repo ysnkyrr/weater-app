@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
 
-function Search({ setAirState , searchParam , setSearchParam}) {
+function Search({ setAirState, searchParam, setSearchParam ,handleButtonClick}) {
   const api = {
     key: "3de4b704a089d3d18bb9e7d1d961fe15",
     base: "https://api.openweathermap.org/data/2.5/weather",
   };
-  
- 
+
   const search = (e) => {
     if (e.key === "Enter") {
       fetch(
@@ -16,10 +15,11 @@ function Search({ setAirState , searchParam , setSearchParam}) {
         .then((result) => {
           setSearchParam("");
           setAirState(result);
+          handleButtonClick()
         });
     }
   };
-  
+
   return (
     <div className="search">
       <input
@@ -28,6 +28,7 @@ function Search({ setAirState , searchParam , setSearchParam}) {
         onChange={(e) => setSearchParam(e.target.value)}
         value={searchParam}
         onKeyPress={search}
+        onClick={handleButtonClick}
       ></input>
     </div>
   );

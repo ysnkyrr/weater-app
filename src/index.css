@@ -56,7 +56,7 @@ code {
 }
 .search {
   display: flex;
-  margin-top: 30px;
+  margin-top: 100px;
   align-items: center;
   justify-content: center;
 }
@@ -71,31 +71,73 @@ code {
   color: black;
 }
 .result {
+  height: 85vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 18%;
+  margin-top: 50px;
+  font-weight: 900;
 }
 .city {
-  margin: auto;
+  padding: 0;
+
   font-size: 46px;
-  color: black;
+  color: grey;
+  margin-top: 100px;
 }
 .degree {
   margin: auto;
   margin-top: 50px;
   font-size: 40px;
-  color: black;
+  color: grey;
   text-align: center;
+  margin-top: 20px;
+}
+.detail {
+  margin-top: 30px;
 }
 .status {
-  margin-top: 10%;
+  margin-top: 20px;
   margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 36px;
-  color: black;
+  color: grey;
   text-align: center;
+}
+
+.svg-turkiye-haritasi {
+  max-width: 1140px;
+  margin: 0 auto;
+  text-align: center;
+}
+.svg-turkiye-haritasi svg {
+  width: 1000px;
+  height: auto;
+}
+.il-isimleri {
+  position: absolute;
+  z-index: 2;
+}
+.il-isimleri div {
+  font-family: "Open Sans";
+  display: inline-block;
+  background: #1094f6;
+  color: #fff;
+  padding: 8px 16px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+#svg-turkiye-haritasi path {
+  cursor: pointer;
+  fill: #222;
+}
+#svg-turkiye-haritasi path:hover {
+  fill: #1094f6;
+}
+#guney-kibris {
+  pointer-events: none;
 }

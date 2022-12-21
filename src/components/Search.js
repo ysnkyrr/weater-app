@@ -1,12 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
-function Search({ setAirState }) {
+function Search({ setAirState , searchParam , setSearchParam}) {
   const api = {
     key: "3de4b704a089d3d18bb9e7d1d961fe15",
     base: "https://api.openweathermap.org/data/2.5/weather",
   };
-  const [searchParam, setSearchParam] = useState("");
-  console.log(searchParam);
+  
+ 
   const search = (e) => {
     if (e.key === "Enter") {
       fetch(
@@ -19,6 +19,7 @@ function Search({ setAirState }) {
         });
     }
   };
+  
   return (
     <div className="search">
       <input

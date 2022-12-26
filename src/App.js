@@ -3,6 +3,7 @@ import Background from "./components/Background.js";
 import Search from "./components/Search.js";
 import Result from "./components/Result.js";
 import Map from "./components/Map.js";
+import Navbar from "./components/Navbar.js";
 function App() {
   const [airState, setAirState] = useState({});
   const [searchParam, setSearchParam] = useState("");
@@ -20,11 +21,15 @@ function App() {
     }
   };
 
+  console.log(airState);
   return (
     <div className="app">
       <section>
+        <Navbar />
         <Background background={airState.weather && airState.weather[0].main} />
-        <div id="weather">Hava durumunu öğrenmek istediğiniz şehre tıklamanız yeterli.</div>
+        <div id="weather">
+          Hava durumunu öğrenmek istediğiniz şehre tıklamanız yeterli.
+        </div>
         <Map
           setSearchParam={setSearchParam}
           setAirState={setAirState}

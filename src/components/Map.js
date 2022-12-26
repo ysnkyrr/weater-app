@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 function Map({ setSearchParam, setAirState, handleButtonClick }) {
   const api = {
     key: "3de4b704a089d3d18bb9e7d1d961fe15",
-    base: "https://api.openweathermap.org/data/2.5",
+    base: "https://api.openweathermap.org/data/2.5/weather",
   };
 
   useEffect(() => {
@@ -55,10 +55,7 @@ function Map({ setSearchParam, setAirState, handleButtonClick }) {
     svgturkiyeharitasi();
   }, []);
   const mapSearch = (cityName) => {
-    fetch(
-      // `${api.base}?q=${cityName}&units=metric&lang=tr&appid=${api.key}`
-      `${api.base}/forecast?q=${cityName}&units=metric&lang=tr&appid=${api.key}`
-    )
+    fetch(`${api.base}?q=${cityName}&units=metric&lang=tr&appid=${api.key}`)
       .then((data) => data.json())
       .then((result) => {
         setAirState(result);

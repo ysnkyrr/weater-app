@@ -10,9 +10,8 @@ function Result({ air, ref }) {
           <div className="result-item now">
             Bugün
             <div className="city">{air.city.name}</div>
-            <div className="date">
-              {new Date(air.list[0].dt * 1000).toLocaleDateString()}
-            </div>
+            <div className="date">{new Date(air.list[0].dt * 1000).toLocaleDateString()}</div>
+
             <div className="detail">
               <div className="degree">
                 {Math.round(air.list[0].main.temp)} °C{" "}
@@ -40,9 +39,8 @@ function Result({ air, ref }) {
           <div className="result-item now">
             Yarın
             <div className="city">{air.city.name}</div>
-            <div className="date">
-              {new Date(air.list[16].dt * 1000).toLocaleDateString()}
-            </div>
+            <div className="date">{new Date(air.list[16].dt * 1000).toLocaleDateString()}</div>
+
             <div className="detail">
               <div className="degree">
                 {Math.round(air.list[16].main.temp)} °C{" "}
@@ -55,9 +53,8 @@ function Result({ air, ref }) {
           <div className="result-item now">
             Yarın
             <div className="city">{air.city.name}</div>
-            <div className="date">
-              {new Date(air.list[24].dt * 1000).toLocaleDateString()}
-            </div>
+            <div className="date">{new Date(air.list[24].dt * 1000).toLocaleDateString()}</div>
+
             <div className="detail">
               <div className="degree">
                 {Math.round(air.list[24].main.temp)} °C{" "}

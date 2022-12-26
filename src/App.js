@@ -24,7 +24,9 @@ function App() {
     <div className="app">
       <section>
         <Background background={airState.weather && airState.weather[0].main} />
-        <div id="weather">Hava durumunu öğrenmek istediğiniz şehre tıklamanız yeterli.</div>
+        <div id="weather">
+          Hava durumunu öğrenmek istediğiniz şehre tıklamanız yeterli.
+        </div>
         <Map
           setSearchParam={setSearchParam}
           setAirState={setAirState}

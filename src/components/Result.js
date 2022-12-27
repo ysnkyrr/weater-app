@@ -20,6 +20,7 @@ function Result({ air, ref }) {
               </div>
             </div>
           </div>
+<<<<<<< Updated upstream
           <div className="result-item now">
             Yarın
             <div className="city">{air.city.name}</div>
@@ -47,11 +48,31 @@ function Result({ air, ref }) {
             <div className="detail">
               <div className="degree">
                 {Math.round(air.list[16].main.temp)} °C{" "}
+=======
+          <div className="result-bottom">
+            <div className="result-item now">
+              <div className="date">
+                {new Date(air.list[8].dt * 1000).toLocaleDateString()}
+              </div>
+              <div className="detail">
+                <div className="degree">
+                  {Math.round(air.list[8].main.temp)} °C{" "}
+                </div>
+                <div className="status">
+                  {air.list[8].weather[0].description.toUpperCase()}
+                </div>
+              </div>
+            </div>
+            <div className="result-item now">
+              <div className="date">
+                {new Date(air.list[16].dt * 1000).toLocaleDateString()}
+>>>>>>> Stashed changes
               </div>
               <div className="status">
                 {air.list[16].weather[0].description.toUpperCase()}
               </div>
             </div>
+<<<<<<< Updated upstream
           </div>
           <div className="result-item now">
             Yarın
@@ -62,6 +83,11 @@ function Result({ air, ref }) {
             <div className="detail">
               <div className="degree">
                 {Math.round(air.list[24].main.temp)} °C{" "}
+=======
+            <div className="result-item now">
+              <div className="date">
+                {new Date(air.list[24].dt * 1000).toLocaleDateString()}
+>>>>>>> Stashed changes
               </div>
               <div className="status">
                 {air.list[24].weather[0].description.toUpperCase()}

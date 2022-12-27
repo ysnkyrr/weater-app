@@ -23,12 +23,9 @@ code {
   flex-direction: column;
   margin: auto;
   align-items: center;
-<<<<<<< Updated upstream
-=======
   background: #4b6cb7;
   background: -webkit-linear-gradient(to right, #182848, #4b6cb7);
   background: linear-gradient(to right, #182848, #4b6cb7);
->>>>>>> Stashed changes
 }
 .background {
   width: 100%;
@@ -80,39 +77,71 @@ code {
   color: black;
 }
 .result {
-  height: 85vh;
+  height: 50vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  margin: auto;
+  justify-content: space-around;
   margin-top: 50px;
   font-weight: 900;
 }
+.result-item {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 20%;
+  height: 60%;
+  background-color: #222;
+  opacity: 0.7;
+  border-radius: 20px;
+}
+.result-top {
+  width: 80%;
+  height: 15vh;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #222;
+  opacity: 0.7;
+  border-radius: 20px;
+}
+.result-bottom {
+  margin: auto;
+  width: 80%;
+  height: 24vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 5px;
+}
+.date {
+  padding-top: 15px;
+}
 .city {
   padding: 0;
-
-  font-size: 46px;
+  font-size: 22px;
   color: white;
-  margin-top: 100px;
 }
 .degree {
   margin: auto;
-  margin-top: 50px;
-  font-size: 40px;
+  font-size: 22px;
   color: white;
   text-align: center;
-  margin-top: 20px;
 }
-.detail {
-  margin-top: 30px;
-}
+
 .status {
-  margin-top: 20px;
   margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 36px;
+  font-size: 18px;
   color: white;
   text-align: center;
   opacity: 1.5;
@@ -151,16 +180,7 @@ code {
 #guney-kibris {
   pointer-events: none;
 }
-.result-item {
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  width: 50%;
-  height: 60%;
-  background-color: #222;
-  opacity: 0.7;
-  border-radius: 20px;
-}
+
 @media (max-width: 768px) {
   .svg-turkiye-haritasi {
     padding: 0%;
@@ -174,19 +194,27 @@ code {
   .background-img {
     width: 100%;
   }
+  .result-top {
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+  }
   .city {
     margin-top: 4%;
-    font-size: 20px;
+    font-size: 12px;
+  }
+  .date {
+    font-size: 12px;
   }
   .degree {
-    font-size: 22px;
+    font-size: 12px;
   }
   .detail {
-    font-size: 18px;
+    font-size: 12px;
   }
   .status {
     margin-top: 10%;
-    font-size: 18px;
+    font-size: 10px;
     margin-bottom: 2%;
   }
   .search-input {
@@ -199,15 +227,26 @@ code {
 
     object-fit: cover;
   }
-  .result-item {
-    width: 50%;
-    margin-top: 20%;
-    height: auto;
-  }
+
   .search-input {
     margin-top: 35%;
   }
-  .result {
-    margin-top: 0;
-  }
+}
+.navbar {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  width: 90%;
+  background-color: grey;
+  border-radius: 16px;
+  margin-top: 1%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.navbar-image {
+  width: 70px;
+  height: 70px;
+  align-items: center;
+  justify-content: center;
 }

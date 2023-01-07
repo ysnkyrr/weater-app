@@ -3,6 +3,7 @@ import Background from "./components/Background.js";
 import Search from "./components/Search.js";
 import Result from "./components/Result.js";
 import Map from "./components/Map.js";
+import Nav from "./components/Nav.js";
 function App() {
   const [airState, setAirState] = useState({});
   const [searchParam, setSearchParam] = useState("");
@@ -23,7 +24,7 @@ function App() {
   return (
     <div className="app">
       <section>
-        <Background background={airState.weather && airState.weather[0].main} />
+        <Nav/>
         <div id="weather">Hava durumunu öğrenmek istediğiniz şehre tıklamanız yeterli.</div>
         <Map
           setSearchParam={setSearchParam}
